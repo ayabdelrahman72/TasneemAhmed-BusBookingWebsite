@@ -10,7 +10,7 @@ namespace BusBookingSystem.Models
     {
         [Required(ErrorMessage = "this field is required")]
         [Display(Name ="Bus Number")]
-        [MaxLength (2)]
+      
         public int id { get; set; }
 
         [Required(ErrorMessage = "this field is required")]
@@ -27,5 +27,6 @@ namespace BusBookingSystem.Models
         [Display(Name = "Bus Type")]
         [Range(3,5)]
         public string MBusType { get; set; }
+        public Driver Driverid { get; set; }
     }
 }

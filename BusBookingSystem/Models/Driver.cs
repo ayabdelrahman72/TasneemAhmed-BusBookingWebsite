@@ -11,6 +11,7 @@ namespace BusBookingSystem.Models
         [Required(ErrorMessage = "You have enter Age")]
         [Display(Name = "Age")]
         public byte Age { get; set; }  //0 to 255
+      
         public string Gender { get; set; } //want to make check list (male , female).
 
         public float Salary { get; set; }

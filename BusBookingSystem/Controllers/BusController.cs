@@ -4,13 +4,17 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using BusBookingSystem.Models;
+using BusBookingSystem.ViewModels;
 
 namespace BusBookingSystem.Controllers
 {
     public class BusController : Controller
     {
         ApplicationDbContext db = new ApplicationDbContext();
-       public IEnumerable<Bus> getBuses()
+       
+
+
+        public IEnumerable<Bus> getBuses()
         {
 
             var CBuses = db.Buses.ToList();
@@ -21,6 +25,7 @@ namespace BusBookingSystem.Controllers
        
         public ActionResult Index()
         {
+            DriverAndBusViewModel DABVM = new DriverAndBusViewModel();
 
             var Buses = getBuses();
             return View(Buses);
